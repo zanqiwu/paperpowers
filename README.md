@@ -1,5 +1,7 @@
 # PaperPowers
 
+[English README](./README.en.md)
+
 `PaperPowers` 是一套面向 `Codex` 的学术论文辅助技能包，目标不是“自动替你写论文”，而是把论文工作拆成一套更可靠的流程，让智能体在正确的阶段做正确的事。
 
 它借鉴了 `superpowers` 的工作流思想，但面向的是学术论文场景：idea 打磨、文献检索、创新性判断、实验设计、图表规划、论文审稿式检查、交互式章节写作，以及修订循环。
@@ -231,6 +233,8 @@ ln -s /path/to/paperpowers/skills ~/.agents/skills/paperpowers
   - 安装和集成说明
 - [TEST_PROMPTS.md](./TEST_PROMPTS.md)
   - 用于验证 skill 触发的测试提示词
+- [README.en.md](./README.en.md)
+  - 英文版仓库说明
 
 ## 当前状态
 
@@ -241,3 +245,7 @@ ln -s /path/to/paperpowers/skills ~/.agents/skills/paperpowers
 - 自动生成 artifact 文件的脚本化能力
 
 如果你正在构建一个以“学术专家 + 论文工作流”为核心的 Codex 学术写作助手，这个仓库可以作为一个可直接使用和继续扩展的起点。
+
+## License
+
+本仓库使用 [MIT License](./LICENSE)。
