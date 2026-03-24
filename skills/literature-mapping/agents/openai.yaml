@@ -1,0 +1,16 @@
+interface:
+  display_name: "相关工作梳理"
+  short_description: "查找相关论文并按主题聚类比较最接近的工作"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#1D4ED8"
+  default_prompt: "Use $literature-mapping to帮我找到这个方向最接近的论文并整理 related work。"
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "mineru-cloud"
+      description: "用于直接解析论文 PDF 以提取摘要、方法和实验段落的 MinerU Cloud MCP"
+
+policy:
+  allow_implicit_invocation: true

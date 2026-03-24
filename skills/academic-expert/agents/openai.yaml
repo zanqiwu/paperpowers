@@ -1,0 +1,16 @@
+interface:
+  display_name: "学术专家把关"
+  short_description: "以长期导师和资深 reviewer 视角整体判断论文是否合理和值得推进"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#7E22CE"
+  default_prompt: "Use $academic-expert to作为长期学术导师先判断我的论文当前最大的短板、风险和下一步。"
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "mineru-cloud"
+      description: "用于解析论文 PDF、抽取章节结构与图表标题的 MinerU Cloud MCP"
+
+policy:
+  allow_implicit_invocation: true

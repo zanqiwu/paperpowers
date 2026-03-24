@@ -1,0 +1,10 @@
+interface:
+  display_name: "实验设计助手"
+  short_description: "按论文 claim 反推所需实验并识别缺失和冗余"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#EA580C"
+  default_prompt: "Use $experiment-design to根据我的论文 claim 规划必须做的实验和可以删掉的重复实验。"
+
+policy:
+  allow_implicit_invocation: true

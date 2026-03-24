@@ -1,0 +1,10 @@
+interface:
+  display_name: "交互式章节写作"
+  short_description: "通过逐步提问补足信息后再生成章节结构或草稿"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#059669"
+  default_prompt: "Use $interactive-section-writing to一步步问我问题，帮我把这一节论文内容写出来。"
+
+policy:
+  allow_implicit_invocation: true

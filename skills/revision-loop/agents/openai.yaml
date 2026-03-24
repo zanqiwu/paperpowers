@@ -1,0 +1,10 @@
+interface:
+  display_name: "论文修订循环"
+  short_description: "把 review comments 整理成有优先级的论文修改计划"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#9333EA"
+  default_prompt: "Use $revision-loop to根据这些 review comments 帮我生成一份分优先级的修订计划。"
+
+policy:
+  allow_implicit_invocation: true

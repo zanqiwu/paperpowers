@@ -1,0 +1,16 @@
+interface:
+  display_name: "论文审稿式检查"
+  short_description: "从技术、证据、实验和表达角度严格审查草稿"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#B91C1C"
+  default_prompt: "Use $paper-review to像正式 reviewer 一样审查这篇论文草稿并按严重程度列问题。"
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "mineru-cloud"
+      description: "用于对论文 PDF 做结构化解析后再执行审稿式检查的 MinerU Cloud MCP"
+
+policy:
+  allow_implicit_invocation: true

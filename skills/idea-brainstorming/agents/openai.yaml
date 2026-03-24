@@ -1,0 +1,10 @@
+interface:
+  display_name: "论文 Idea 打磨"
+  short_description: "把模糊研究想法整理成更清晰可辩护的论文方案"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#2563EB"
+  default_prompt: "Use $idea-brainstorming to帮我把这个研究想法打磨成清晰的问题、贡献和风险说明。"
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,10 @@
+interface:
+  display_name: "论文图表规划"
+  short_description: "决定论文该画哪些图以及每张图要传达什么"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#0891B2"
+  default_prompt: "Use $figure-planning to帮我规划这篇论文应该画哪些图以及每张图的 brief。"
+
+policy:
+  allow_implicit_invocation: true

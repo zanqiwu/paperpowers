@@ -1,0 +1,10 @@
+interface:
+  display_name: "论文任务分诊"
+  short_description: "判断当前论文任务阶段并路由到合适的写作流程"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#0F766E"
+  default_prompt: "Use $paper-triage to判断我当前这项论文工作应该先做 idea、文献、实验、写作还是审稿式检查。"
+
+policy:
+  allow_implicit_invocation: true

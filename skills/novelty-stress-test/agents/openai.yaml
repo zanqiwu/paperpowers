@@ -1,0 +1,10 @@
+interface:
+  display_name: "创新性压力测试"
+  short_description: "像苛刻 reviewer 一样检查论文新意是否真正成立"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#7C3AED"
+  default_prompt: "Use $novelty-stress-test to像审稿人一样判断我的论文创新点是否站得住。"
+
+policy:
+  allow_implicit_invocation: true
