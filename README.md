@@ -249,6 +249,8 @@ ln -s /path/to/paperpowers/skills ~/.agents/skills/paperpowers
   - 英文版仓库说明
 - [integrations/mineru-cloud/README.md](./integrations/mineru-cloud/README.md)
   - MinerU Cloud 本地集成说明
+- [integrations/mineru-cloud/README.en.md](./integrations/mineru-cloud/README.en.md)
+  - MinerU Cloud 英文版集成说明
 
 ## 当前状态
 
