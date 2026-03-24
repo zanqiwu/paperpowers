@@ -88,28 +88,25 @@
 - 如果摘要拿不到，不能把它当作 novelty blocker 或关键证据
 - 如果摘要显示论文其实不相关，必须立即停止使用它
 
-## MinerU Cloud 集成
+## MCP 目录
 
-当前已经集成 `mineru-cloud`，用于读取和解析论文 PDF。
+仓库中的 MCP 工具现在统一收敛到 `mcp/` 目录，便于后续继续扩展更多工具，而不是把不同集成散落在多个位置。
 
-已接入的 skills：
+当前已包含：
+
+- [mcp/README.md](./mcp/README.md)
+- [mcp/mineru-cloud/README.md](./mcp/mineru-cloud/README.md)
+
+`mineru-cloud` 用于读取和解析论文 PDF，目前主要服务于：
 
 - `academic-expert`
 - `paper-review`
 - `literature-mapping`
 
-仓库内也已经提供了一个可复用的本地集成目录，其中既包含源码，也包含配置模板：
-
-- [integrations/mineru-cloud/README.md](./integrations/mineru-cloud/README.md)
-- [integrations/mineru-cloud/source/README.md](./integrations/mineru-cloud/source/README.md)
-- [integrations/mineru-cloud/.env.example](./integrations/mineru-cloud/.env.example)
-- [integrations/mineru-cloud/mcp.example.json](./integrations/mineru-cloud/mcp.example.json)
-
 注意：
 
 - API key 不会写入仓库
 - 真实 `MINERU_TOKEN` 需要你在本地环境变量中设置
-- 本仓库中的模板文件只提供占位符和配置示例
 - `mineru-cloud` 的封装源码已经随仓库一起提供，便于你继续维护
 
 ## 文档说明
@@ -120,7 +117,7 @@
   - 用于验证 skill 触发的测试提示词
 - [README.en.md](./README.en.md)
   - 英文版仓库说明
-- [integrations/mineru-cloud/README.md](./integrations/mineru-cloud/README.md)
-  - MinerU Cloud 本地集成说明
-- [integrations/mineru-cloud/README.en.md](./integrations/mineru-cloud/README.en.md)
-  - MinerU Cloud 英文版集成说明
+- [mcp/README.md](./mcp/README.md)
+  - MCP 目录说明
+- [mcp/mineru-cloud/README.md](./mcp/mineru-cloud/README.md)
+  - MinerU Cloud 源码说明

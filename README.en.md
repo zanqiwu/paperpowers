@@ -37,31 +37,30 @@ It borrows the workflow mindset from `superpowers`, but applies it to academic w
 - if the abstract is unavailable, do not use the paper as a novelty blocker or key authority
 - if the abstract shows the paper is off-topic, stop using it immediately
 
-## MinerU Cloud Integration
+## MCP Directory
 
-`mineru-cloud` is integrated for PDF reading and structured paper parsing.
+All MCP tools are now grouped under `mcp/` so future tools can be added in one consistent place.
 
-Integrated skills:
+Current entries:
+
+- [mcp/README.md](./mcp/README.md)
+- [mcp/mineru-cloud/README.md](./mcp/mineru-cloud/README.md)
+
+`mineru-cloud` is used for PDF reading and structured paper parsing, mainly by:
 
 - `academic-expert`
 - `paper-review`
 - `literature-mapping`
 
-The repository also includes a reusable in-repo integration package with both source code and configuration templates:
-
-- [integrations/mineru-cloud/README.md](./integrations/mineru-cloud/README.md)
-- [integrations/mineru-cloud/source/README.md](./integrations/mineru-cloud/source/README.md)
-- [integrations/mineru-cloud/.env.example](./integrations/mineru-cloud/.env.example)
-- [integrations/mineru-cloud/mcp.example.json](./integrations/mineru-cloud/mcp.example.json)
-
 Important:
 
 - no API key is stored in the repository
 - the real `MINERU_TOKEN` must be configured locally
-- the real wrapper source is bundled in the repository for maintenance and self-hosted use
+- the wrapper source is bundled in the repository for maintenance and self-hosted use
 
 ## Documentation
 
 - [INSTALL.md](./INSTALL.md): installation and integration notes
 - [TEST_PROMPTS.md](./TEST_PROMPTS.md): prompts for testing skill triggering
-- [integrations/mineru-cloud/README.md](./integrations/mineru-cloud/README.md): MinerU Cloud integration notes
+- [mcp/README.md](./mcp/README.md): MCP directory notes
+- [mcp/mineru-cloud/README.md](./mcp/mineru-cloud/README.md): MinerU Cloud source notes

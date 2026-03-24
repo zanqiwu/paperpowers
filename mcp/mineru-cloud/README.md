@@ -19,7 +19,7 @@
 ## 本地运行
 
 ```bash
-uv --directory integrations/mineru-cloud/source run mcp-server-mineru-bach
+uv --directory mcp/mineru-cloud run mcp-server-mineru-bach
 ```
 
 ## 必需环境变量

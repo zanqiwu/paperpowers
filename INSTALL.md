@@ -71,7 +71,7 @@ ln -s /path/to/paperpowers/skills ~/.agents/skills/paperpowers
 
 - [TEST_PROMPTS.md](./TEST_PROMPTS.md)
 
-## 第 4 步：安装 MinerU Cloud 集成
+## 第 4 步：安装 MCP 中的 MinerU Cloud
 
 如果你希望这些 skill 能直接分析 PDF：
 
@@ -81,16 +81,12 @@ ln -s /path/to/paperpowers/skills ~/.agents/skills/paperpowers
 
 那么建议安装 `mineru-cloud`。
 
-### 4.1 查看仓库内集成目录
+### 4.1 查看 MCP 目录
 
-仓库里已经包含源码和模板：
+仓库里现在统一使用：
 
-- [integrations/mineru-cloud/README.md](./integrations/mineru-cloud/README.md)
-- [integrations/mineru-cloud/README.en.md](./integrations/mineru-cloud/README.en.md)
-- [integrations/mineru-cloud/source/README.md](./integrations/mineru-cloud/source/README.md)
-- [integrations/mineru-cloud/.env.example](./integrations/mineru-cloud/.env.example)
-- [integrations/mineru-cloud/mcp.example.json](./integrations/mineru-cloud/mcp.example.json)
-- [integrations/mineru-cloud/mcp.uvx.example.json](./integrations/mineru-cloud/mcp.uvx.example.json)
+- [mcp/README.md](./mcp/README.md)
+- [mcp/mineru-cloud/README.md](./mcp/mineru-cloud/README.md)
 
 ### 4.2 设置环境变量
 
@@ -110,21 +106,27 @@ export MINERU_BASE_URL="https://mineru.net/api/v4"
 
 ### 4.3 配置 MCP
 
-推荐优先使用仓库内源码版本：
+推荐直接从仓库内源码启动：
 
-- [integrations/mineru-cloud/mcp.example.json](./integrations/mineru-cloud/mcp.example.json)
-
-这个模板使用：
-
-- `uv --directory /path/to/paperpowers/integrations/mineru-cloud/source run mcp-server-mineru-bach`
-
-如果你更希望直接使用已发布包，也可以参考：
-
-- [integrations/mineru-cloud/mcp.uvx.example.json](./integrations/mineru-cloud/mcp.uvx.example.json)
-
-它使用：
-
-- `uvx mcp-server-mineru-bach`
+```json
+{
+  "mcpServers": {
+    "mineru-cloud": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/absolute/path/to/paperpowers/mcp/mineru-cloud",
+        "run",
+        "mcp-server-mineru-bach"
+      ],
+      "env": {
+        "MINERU_TOKEN": "${MINERU_TOKEN}",
+        "MINERU_BASE_URL": "${MINERU_BASE_URL}"
+      }
+    }
+  }
+}
+```
 
 ## 第 5 步：验证 MinerU 是否工作
 
