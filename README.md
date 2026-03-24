@@ -186,6 +186,18 @@
 - 直接分析草稿 PDF
 - 提取摘要、方法、实验段落、图表标题、章节结构
 
+仓库内也已经提供了一个可复用的本地集成模板：
+
+- [integrations/mineru-cloud/README.md](./integrations/mineru-cloud/README.md)
+- [integrations/mineru-cloud/.env.example](./integrations/mineru-cloud/.env.example)
+- [integrations/mineru-cloud/mcp.example.json](./integrations/mineru-cloud/mcp.example.json)
+
+注意：
+
+- API key 不会写入仓库
+- 真实 `MINERU_TOKEN` 需要你在本地环境变量中设置
+- 本仓库中的模板文件只提供占位符和配置示例
+
 ## 目录结构
 
 ```text
@@ -235,6 +247,8 @@ ln -s /path/to/paperpowers/skills ~/.agents/skills/paperpowers
   - 用于验证 skill 触发的测试提示词
 - [README.en.md](./README.en.md)
   - 英文版仓库说明
+- [integrations/mineru-cloud/README.md](./integrations/mineru-cloud/README.md)
+  - MinerU Cloud 本地集成说明
 
 ## 当前状态
 

@@ -29,10 +29,13 @@ pnpm-debug.log*
 !.env.example
 *.secret
 *.secrets
+integrations/mineru-cloud/.env.local
+integrations/mineru-cloud/.env
 
 # Local MCP / local config overrides
 mcp.local.json
 codex.local.toml
+integrations/mineru-cloud/mcp.local.json
 
 # Build / temp
 dist/

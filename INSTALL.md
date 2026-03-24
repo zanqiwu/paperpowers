@@ -63,6 +63,20 @@ ln -s /path/to/paperpowers/skills ~/.agents/skills/paperpowers
 - 它们需要章节结构、摘要、实验段落、图表标题等结构化内容
 - 其他 skill 如 `idea-brainstorming`、`revision-loop` 并不总是依赖 PDF 解析，不应强绑定 MinerU
 
+## MinerU Cloud 本地集成模板
+
+仓库内已经提供了 MinerU Cloud 的本地集成模板：
+
+- `integrations/mineru-cloud/README.md`
+- `integrations/mineru-cloud/.env.example`
+- `integrations/mineru-cloud/mcp.example.json`
+
+安全规则：
+
+- 不要把真实 `MINERU_TOKEN` 写入仓库
+- 请通过本地环境变量设置 token
+- 如果你需要本地私有配置文件，请使用不纳入 git 的本地文件
+
 ## 常见问题
 
 ### 1. Skills 没有生效

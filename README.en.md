@@ -134,6 +134,18 @@ Typical use cases:
 - analyze a draft PDF directly
 - extract abstract, method, experiment sections, figure captions, and document structure
 
+The repository also includes a reusable local integration package:
+
+- [integrations/mineru-cloud/README.md](./integrations/mineru-cloud/README.md)
+- [integrations/mineru-cloud/.env.example](./integrations/mineru-cloud/.env.example)
+- [integrations/mineru-cloud/mcp.example.json](./integrations/mineru-cloud/mcp.example.json)
+
+Important:
+
+- no API key is stored in the repository
+- the real `MINERU_TOKEN` must be configured locally
+- the included files are templates only
+
 ## Repository Structure
 
 ```text
@@ -177,6 +189,7 @@ Restart `Codex` after installation.
 
 - [INSTALL.md](./INSTALL.md): installation and integration notes
 - [TEST_PROMPTS.md](./TEST_PROMPTS.md): prompts for testing skill triggering
+- [integrations/mineru-cloud/README.md](./integrations/mineru-cloud/README.md): MinerU Cloud integration notes
 
 ## Status
 
