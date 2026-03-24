@@ -33,115 +33,41 @@
 
 入口技能。用于判断当前任务属于哪个论文阶段，并把请求路由到合适的 skill。
 
-适合：
-- 你不确定现在该先做 idea、文献、实验、写作还是审稿式检查
-- 你想让系统先判断“当前最关键的问题是什么”
-
 ### 2. `academic-expert`
 
 整套技能里最重要的核心角色。它会以长期学术导师和资深 reviewer 的视角，判断论文内容是否合理、claim 是否成立、实验是否足够、叙事是否偏题，以及下一步最值得投入精力的工作是什么。
-
-适合：
-- 希望有一个“学术专家”角色整体把关论文
-- 想持续跟踪论文状态，而不是只得到一次性的回答
-- 想先判断方向和证据是否站得住，再决定是否继续写
 
 ### 3. `idea-brainstorming`
 
 把一个模糊的研究想法整理成更清晰的论文 idea brief。
 
-适合：
-- 打磨研究问题
-- 梳理贡献点
-- 明确主要风险和后续证据需求
-
 ### 4. `literature-mapping`
 
 用于查找、筛选、聚类和比较相关工作，找出与你最接近的论文。
-
-适合：
-- 写 related work
-- 判断 novelty 是否站得住
-- 找近期强 baseline
 
 ### 5. `novelty-stress-test`
 
 模拟苛刻 reviewer，对你的创新性主张进行压力测试。
 
-适合：
-- 判断“这到底算不算论文贡献”
-- 提前发现 reviewer 可能会攻击的点
-- 缩窄过强或不稳的 claim
-
 ### 6. `experiment-design`
 
 从论文 claim 反推所需实验，并识别缺失实验和冗余实验。
-
-适合：
-- 设计实验矩阵
-- 找出必须补的 ablation / baseline / robustness
-- 判断哪些实验重复表达了同一个结论
 
 ### 7. `paper-review`
 
 像正式审稿人一样审查草稿、章节、提纲、实验故事或 rebuttal。
 
-适合：
-- 检查论文结构和论证是否成立
-- 找出技术、证据、实验、公平性、表达等问题
-- 在投稿前做严格自查
-
 ### 8. `figure-planning`
 
 规划论文应该画哪些图，每张图要表达什么，而不是直接生成花哨图示。
-
-适合：
-- 设计 method overview 图
-- 规划 qualitative / ablation / efficiency 图
-- 明确每张图的目标、元素和 caption 意图
 
 ### 9. `interactive-section-writing`
 
 当你知道要写哪一节，但不知道怎么写时，先通过提问补足信息，再生成结构或草稿。
 
-适合：
-- abstract 不会写
-- introduction 不知道怎么开头
-- experiments 不知道怎么解释结果
-- rebuttal 不知道怎么回应
-
 ### 10. `revision-loop`
 
 把导师、审稿人或自查意见整理成一份有优先级的修订计划。
-
-适合：
-- 收到 review comments 后组织修改
-- 合并重复问题
-- 区分必须修、应该修、可忽略的问题
-
-## 推荐使用顺序
-
-如果你是从零开始准备一篇论文，推荐按这个顺序使用：
-
-1. `paper-triage`
-2. `academic-expert`
-3. `idea-brainstorming`
-4. `literature-mapping`
-5. `novelty-stress-test`
-6. `experiment-design`
-7. `figure-planning`
-8. `interactive-section-writing`
-9. `paper-review`
-10. `revision-loop`
-
-如果你已经有草稿，通常从：
-
-1. `paper-triage`
-2. `academic-expert`
-3. `paper-review`
-4. `revision-loop`
-
-开始更合适。
 
 ## 设计原则
 
@@ -162,14 +88,6 @@
 - 如果摘要拿不到，不能把它当作 novelty blocker 或关键证据
 - 如果摘要显示论文其实不相关，必须立即停止使用它
 
-这条规则已经写入共享证据规则，并约束到多个 skill，尤其是：
-
-- `academic-expert`
-- `literature-mapping`
-- `paper-review`
-- `novelty-stress-test`
-- `figure-planning`
-
 ## MinerU Cloud 集成
 
 当前已经集成 `mineru-cloud`，用于读取和解析论文 PDF。
@@ -180,15 +98,10 @@
 - `paper-review`
 - `literature-mapping`
 
-适用场景：
-
-- 直接分析论文 PDF
-- 直接分析草稿 PDF
-- 提取摘要、方法、实验段落、图表标题、章节结构
-
-仓库内也已经提供了一个可复用的本地集成模板：
+仓库内也已经提供了一个可复用的本地集成目录，其中既包含源码，也包含配置模板：
 
 - [integrations/mineru-cloud/README.md](./integrations/mineru-cloud/README.md)
+- [integrations/mineru-cloud/source/README.md](./integrations/mineru-cloud/source/README.md)
 - [integrations/mineru-cloud/.env.example](./integrations/mineru-cloud/.env.example)
 - [integrations/mineru-cloud/mcp.example.json](./integrations/mineru-cloud/mcp.example.json)
 
@@ -197,47 +110,7 @@
 - API key 不会写入仓库
 - 真实 `MINERU_TOKEN` 需要你在本地环境变量中设置
 - 本仓库中的模板文件只提供占位符和配置示例
-
-## 目录结构
-
-```text
-paperpowers/
-  INSTALL.md
-  README.md
-  TEST_PROMPTS.md
-  references/
-  skills/
-```
-
-## 安装到 Codex
-
-### Windows
-
-```powershell
-New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.agents\skills" | Out-Null
-cmd /c mklink /J "$env:USERPROFILE\.agents\skills\paperpowers" "C:\Users\Admin\paperpowers\skills"
-```
-
-### macOS / Linux
-
-```bash
-mkdir -p ~/.agents/skills
-ln -s /path/to/paperpowers/skills ~/.agents/skills/paperpowers
-```
-
-完成后重启 `Codex`。
-
-## 如何触发
-
-你可以直接说：
-
-- `请你先作为一个学术专家整体判断我这篇论文哪里最不成立`
-- `帮我找和这个工作最接近的 5 篇论文`
-- `我这篇论文还缺哪些实验`
-- `请像 reviewer 一样 review 我的草稿`
-- `我不知道 abstract 怎么写，你一步步问我`
-- `这篇论文应该画哪几张图`
-- `帮我根据 review comments 制定修订计划`
+- `mineru-cloud` 的封装源码已经随仓库一起提供，便于你继续维护
 
 ## 文档说明
 
@@ -251,17 +124,3 @@ ln -s /path/to/paperpowers/skills ~/.agents/skills/paperpowers
   - MinerU Cloud 本地集成说明
 - [integrations/mineru-cloud/README.en.md](./integrations/mineru-cloud/README.en.md)
   - MinerU Cloud 英文版集成说明
-
-## 当前状态
-
-当前版本已经可以作为 `Codex skills` 使用，但仍然是第一版结构化能力，后续还可以继续扩展：
-
-- Zotero / OpenAlex / Semantic Scholar / arXiv 的自动接入
-- 针对不同学科领域的专用专家 persona
-- 自动生成 artifact 文件的脚本化能力
-
-如果你正在构建一个以“学术专家 + 论文工作流”为核心的 Codex 学术写作助手，这个仓库可以作为一个可直接使用和继续扩展的起点。
-
-## License
-
-本仓库使用 [MIT License](./LICENSE)。

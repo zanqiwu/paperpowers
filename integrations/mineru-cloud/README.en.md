@@ -2,12 +2,13 @@
 
 [简体中文说明](./README.md)
 
-This directory contains a reusable in-repository integration package for `mineru-cloud`, so `PaperPowers` users can safely enable paper PDF parsing without committing API keys into the repository.
+This directory contains an in-repository `mineru-cloud` integration. It includes both configuration templates and the wrapped MCP source code, so `PaperPowers` users can maintain and run it without committing API keys into the repository.
 
 ## What This Integration Provides
 
 - an environment-variable template without real secrets
 - a generic MCP configuration example
+- the wrapped `mineru-cloud` source package
 - instructions for setting `MINERU_TOKEN`
 - guidance on which `PaperPowers` skills use `mineru-cloud`
 
@@ -27,19 +28,18 @@ The repository should only contain template files such as:
 
 - `.env.example`
 - `mcp.example.json`
-
-Real configuration should live in local environment variables or in your own local untracked config files.
+- `mcp.uvx.example.json`
 
 ## Dependency Notes
 
-Based on the `mcp-server-mineru-bach` PyPI page, as checked on `2026-03-24`:
+The bundled source package is `mcp-server-mineru-bach`, with the following defaults:
 
-- launcher: `uvx mcp-server-mineru-bach`
+- default API base URL: `https://mineru.net/api/v4`
 - required env var: `MINERU_TOKEN`
-- optional env var: `MINERU_BASE_URL`
-
-Source:
-- https://pypi.org/project/mcp-server-mineru-bach/
+- optional env vars:
+  - `MINERU_BASE_URL`
+  - `MINERU_OUTPUT_DIR`
+  - `MINERU_TMP_DIR`
 
 ## Quick Start
 
@@ -51,61 +51,37 @@ Use the template:
 integrations/mineru-cloud/.env.example
 ```
 
-You can keep the real values in system environment variables instead of editing the template file.
-
 ### 2. Windows example
-
-PowerShell:
 
 ```powershell
 setx MINERU_TOKEN "your_real_token_here"
-setx MINERU_BASE_URL "https://api.mineru.net/v1"
+setx MINERU_BASE_URL "https://mineru.net/api/v4"
 ```
-
-Reopen your terminal after setting them.
 
 ### 3. macOS / Linux example
 
 ```bash
 export MINERU_TOKEN="your_real_token_here"
-export MINERU_BASE_URL="https://api.mineru.net/v1"
+export MINERU_BASE_URL="https://mineru.net/api/v4"
 ```
-
-If you want persistence, add them to:
-
-- `~/.bashrc`
-- `~/.zshrc`
-- or your preferred shell config
 
 ### 4. MCP configuration
 
-See:
+Prefer the local-source example:
 
 ```text
 integrations/mineru-cloud/mcp.example.json
 ```
 
-This is a generic MCP example. Different clients may use different config paths and loading conventions, so you should merge the `mineru-cloud` block into your own client config.
+If you want to run the published package instead, see:
+
+```text
+integrations/mineru-cloud/mcp.uvx.example.json
+```
 
 ## Directory Contents
 
 - `.env.example`
-  - environment template, no real secret
 - `mcp.example.json`
-  - generic MCP configuration example
-
-## Recommended Practice
-
-- store `MINERU_TOKEN` in system environment variables
-- do not create a tracked `.env` with real secrets
-- if you need local file-based config, keep it untracked
-
-## How It Relates To PaperPowers
-
-`PaperPowers` only declares `mineru-cloud` as a dependency at the skill layer. It does not hardcode API keys into skill files.
-
-That keeps the repository:
-
-- safer for public publishing
-- reusable across users
-- easier to configure with each user's own MinerU account and token
+- `mcp.uvx.example.json`
+- `source/`
