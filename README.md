@@ -1,46 +1,57 @@
 # PaperPowers
 
-`PaperPowers` 是一套面向 `Codex` 的学术论文辅助技能包。它借鉴了 `superpowers` 的思路，但关注点不是软件开发，而是论文 idea 打磨、文献梳理、创新性审视、实验设计、论文审稿式检查、图表规划和交互式写作。
+`PaperPowers` 是一套面向 `Codex` 的学术论文辅助技能包，目标不是“自动替你写论文”，而是把论文工作拆成一套更可靠的流程，让智能体在正确的阶段做正确的事。
 
-它的目标不是“自动替你写论文”，而是把论文工作拆成一组更可靠的工作流，让智能体在合适的阶段做合适的事。
+它借鉴了 `superpowers` 的工作流思想，但面向的是学术论文场景：idea 打磨、文献检索、创新性判断、实验设计、图表规划、论文审稿式检查、交互式章节写作，以及修订循环。
 
-## 适用场景
+## 它解决什么问题
 
-- 你有一个模糊的研究想法，但不知道是否足够新
-- 你想找最相关的论文，搞清楚自己和前人工作的差异
-- 你不确定现在的实验是否足以支撑论文结论
-- 你希望像审稿人一样检查自己的草稿
-- 你想规划论文中的图，而不是只让模型“随便画”
-- 你卡在某一节写不出来，希望智能体一步步提问引导
+很多论文辅助工具的问题不是“模型不够聪明”，而是：
+
+- 在 idea 还不清楚时就开始写摘要
+- 没有认真核验相关论文，就下 novelty 结论
+- 实验做了很多，但没有映射到核心 claim
+- 论文图很多，但没有真正承担叙事功能
+- 修改 review comments 时分不清哪些是致命问题，哪些只是表达问题
+
+`PaperPowers` 的设计目标就是减少这些问题。
+
+## 核心能力
+
+- 像学术导师一样整体判断论文当前最薄弱的环节
+- 在搜索相关论文时要求先核验元信息并至少阅读摘要
+- 帮你判断哪些实验必须做，哪些实验只是重复劳动
+- 用 reviewer 视角检查论文的逻辑、证据、实验和表达
+- 在你不会写某一节时，先提问补足信息，再生成结构或草稿
+- 帮你规划论文图，而不是直接生成无意义的“框架图”
 
 ## 当前包含的 Skills
 
 ### 1. `paper-triage`
 
-入口技能。用于判断当前请求属于哪个论文阶段，并把任务路由到正确的 skill。
+入口技能。用于判断当前任务属于哪个论文阶段，并把请求路由到合适的 skill。
 
 适合：
-- 还不确定现在应该先做 idea、文献、实验还是写作
-- 想让系统先判断你当前最缺什么
+- 你不确定现在该先做 idea、文献、实验、写作还是审稿式检查
+- 你想让系统先判断“当前最关键的问题是什么”
 
 ### 2. `academic-expert`
 
-这是整套技能里最重要的核心角色。它不是单纯做审稿，也不是单纯帮你润色，而是像一个严肃的学术专家或长期导师一样，持续判断你的论文内容是否合理、claim 是否站得住、实验是否足够、写法是否偏题，以及你下一步最值得投入时间的工作是什么。
+整套技能里最重要的核心角色。它会以长期学术导师和资深 reviewer 的视角，判断论文内容是否合理、claim 是否成立、实验是否足够、叙事是否偏题，以及下一步最值得投入精力的工作是什么。
 
 适合：
 - 希望有一个“学术专家”角色整体把关论文
-- 不确定自己的论证、实验和叙事是否成立
-- 想让系统像导师一样先判断方向对不对，再决定下一步
-- 希望它长期跟踪论文状态，而不是只回答一次
+- 想持续跟踪论文状态，而不是只得到一次性的回答
+- 想先判断方向和证据是否站得住，再决定是否继续写
 
 ### 3. `idea-brainstorming`
 
-把一个粗糙研究想法整理成更清晰的论文 idea brief。
+把一个模糊的研究想法整理成更清晰的论文 idea brief。
 
 适合：
-- 想打磨研究问题
-- 想梳理贡献点
-- 想明确风险和后续证据需求
+- 打磨研究问题
+- 梳理贡献点
+- 明确主要风险和后续证据需求
 
 ### 4. `literature-mapping`
 
@@ -48,7 +59,7 @@
 
 适合：
 - 写 related work
-- 检查 novelty 是否站得住
+- 判断 novelty 是否站得住
 - 找近期强 baseline
 
 ### 5. `novelty-stress-test`
@@ -62,7 +73,7 @@
 
 ### 6. `experiment-design`
 
-从论文 claim 反推需要哪些实验，并识别冗余实验和缺失实验。
+从论文 claim 反推所需实验，并识别缺失实验和冗余实验。
 
 适合：
 - 设计实验矩阵
@@ -76,7 +87,7 @@
 适合：
 - 检查论文结构和论证是否成立
 - 找出技术、证据、实验、公平性、表达等问题
-- 在投稿前做一次严格自查
+- 在投稿前做严格自查
 
 ### 8. `figure-planning`
 
@@ -102,7 +113,7 @@
 把导师、审稿人或自查意见整理成一份有优先级的修订计划。
 
 适合：
-- 收到 review comments 之后组织修改
+- 收到 review comments 后组织修改
 - 合并重复问题
 - 区分必须修、应该修、可忽略的问题
 
@@ -130,75 +141,6 @@
 
 开始更合适。
 
-## 目录结构
-
-```text
-paperpowers/
-  README.md
-  references/
-    evidence-rules.md
-    experiment-checklist.md
-    figure-patterns.md
-    review-rubric.md
-    venue-expectations.md
-  skills/
-    paper-triage/
-      SKILL.md
-    academic-expert/
-      SKILL.md
-    idea-brainstorming/
-      SKILL.md
-    literature-mapping/
-      SKILL.md
-    novelty-stress-test/
-      SKILL.md
-    experiment-design/
-      SKILL.md
-    paper-review/
-      SKILL.md
-    figure-planning/
-      SKILL.md
-    interactive-section-writing/
-      SKILL.md
-    revision-loop/
-      SKILL.md
-```
-
-## 安装到 Codex
-
-### Windows
-
-在 PowerShell 中执行：
-
-```powershell
-New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.agents\skills" | Out-Null
-cmd /c mklink /J "$env:USERPROFILE\.agents\skills\paperpowers" "C:\Users\Admin\paperpowers\skills"
-```
-
-然后重启 `Codex`。
-
-### macOS / Linux
-
-```bash
-mkdir -p ~/.agents/skills
-ln -s /path/to/paperpowers/skills ~/.agents/skills/paperpowers
-```
-
-然后重启 `Codex`。
-
-## 如何触发
-
-你可以直接说：
-
-- `帮我判断这个论文 idea 有没有创新性`
-- `请你先作为一个学术专家整体判断我这篇论文哪里最不成立`
-- `帮我找和这个工作最接近的 5 篇论文`
-- `我这篇论文还缺哪些实验`
-- `请像审稿人一样 review 我的草稿`
-- `我不知道 abstract 怎么写，你一步步问我`
-- `这篇论文应该画哪几张图`
-- `帮我根据 review comments 制定修订计划`
-
 ## 设计原则
 
 - 先证据，再结论
@@ -209,39 +151,93 @@ ln -s /path/to/paperpowers/skills ~/.agents/skills/paperpowers
 - 每个实验都必须对应某个 claim
 - 每张图都必须服务于论文叙事
 
-## 参考文件说明
+## 文献正确性规则
 
-`references/` 目录中的文件为所有 skill 提供共享约束：
+`PaperPowers` 对“搜索论文的正确性”做了额外约束：
 
-- `evidence-rules.md`
-  - 规定文献、引用、实验结果相关的真实性约束
-- `experiment-checklist.md`
-  - 用于检查实验是否充分、是否重复
-- `figure-patterns.md`
-  - 用于选择合适的论文图类型
-- `review-rubric.md`
-  - 用于统一审稿式输出的检查维度
-- `venue-expectations.md`
-  - 用于按投稿场景校准证据强度和实验完整度
-- `academic-personas.md`
-  - 用于支持 academic-expert 在导师、审稿人、实验设计者等角色间切换
-- `advisor-cycle.md`
-  - 用于让 academic-expert 以长期导师方式持续跟踪论文进展
-- `pdf-ingestion-with-mineru.md`
-  - 用于规定何时使用 MinerU Cloud 解析论文 PDF，以及哪些 skill 应该使用它
+- 搜索到论文后，必须先核验标题、作者、年份、venue 或 archive
+- 至少阅读摘要，才能把该论文当作关键相关工作
+- 如果摘要拿不到，不能把它当作 novelty blocker 或关键证据
+- 如果摘要显示论文其实不相关，必须立即停止使用它
+
+这条规则已经写入共享证据规则，并约束到多个 skill，尤其是：
+
+- `academic-expert`
+- `literature-mapping`
+- `paper-review`
+- `novelty-stress-test`
+- `figure-planning`
+
+## MinerU Cloud 集成
+
+当前已经集成 `mineru-cloud`，用于读取和解析论文 PDF。
+
+已接入的 skills：
+
+- `academic-expert`
+- `paper-review`
+- `literature-mapping`
+
+适用场景：
+
+- 直接分析论文 PDF
+- 直接分析草稿 PDF
+- 提取摘要、方法、实验段落、图表标题、章节结构
+
+## 目录结构
+
+```text
+paperpowers/
+  INSTALL.md
+  README.md
+  TEST_PROMPTS.md
+  references/
+  skills/
+```
+
+## 安装到 Codex
+
+### Windows
+
+```powershell
+New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.agents\skills" | Out-Null
+cmd /c mklink /J "$env:USERPROFILE\.agents\skills\paperpowers" "C:\Users\Admin\paperpowers\skills"
+```
+
+### macOS / Linux
+
+```bash
+mkdir -p ~/.agents/skills
+ln -s /path/to/paperpowers/skills ~/.agents/skills/paperpowers
+```
+
+完成后重启 `Codex`。
+
+## 如何触发
+
+你可以直接说：
+
+- `请你先作为一个学术专家整体判断我这篇论文哪里最不成立`
+- `帮我找和这个工作最接近的 5 篇论文`
+- `我这篇论文还缺哪些实验`
+- `请像 reviewer 一样 review 我的草稿`
+- `我不知道 abstract 怎么写，你一步步问我`
+- `这篇论文应该画哪几张图`
+- `帮我根据 review comments 制定修订计划`
+
+## 文档说明
+
+- [INSTALL.md](./INSTALL.md)
+  - 安装和集成说明
+- [TEST_PROMPTS.md](./TEST_PROMPTS.md)
+  - 用于验证 skill 触发的测试提示词
 
 ## 当前状态
 
-当前版本是第一版技能草稿，重点是把论文工作流结构化，便于后续继续增强。它现在已经可以作为 `Codex skills` 使用，但还没有内置：
+当前版本已经可以作为 `Codex skills` 使用，但仍然是第一版结构化能力，后续还可以继续扩展：
 
 - Zotero / OpenAlex / Semantic Scholar / arXiv 的自动接入
 - 针对不同学科领域的专用专家 persona
 - 自动生成 artifact 文件的脚本化能力
 
-当前已经接入的文档解析能力：
-
-- `mineru-cloud`
-  - 已接入到 `academic-expert`、`paper-review`、`literature-mapping`
-  - 适用于直接分析论文 PDF、草稿 PDF、章节结构、图表标题和实验内容
-
-这些都可以在下一版继续扩展。
+如果你正在构建一个以“学术专家 + 论文工作流”为核心的 Codex 学术写作助手，这个仓库可以作为一个可直接使用和继续扩展的起点。
