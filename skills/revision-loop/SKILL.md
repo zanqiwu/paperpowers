@@ -32,6 +32,7 @@ Read `../../references/review-rubric.md` and `../../references/evidence-rules.md
    - acknowledge but do not overreact
 5. Produce a revision plan.
 6. After changes, re-run `paperpowers:paper-review` on the updated artifact.
+7. If the revision changes the paper strategy materially, update `paperpowers:project-memory`.
 
 ## Output Format
 

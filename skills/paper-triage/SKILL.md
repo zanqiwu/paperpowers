@@ -16,8 +16,11 @@ Before doing real work, identify:
 
 Then use the matching skill:
 - Need a senior academic expert to evaluate reasonableness, claims, experiments, and writing direction end-to-end -> `paperpowers:academic-expert`
+- Need stable cross-session paper state and next actions -> `paperpowers:project-memory`
+- Need a persistent claim-to-evidence support map -> `paperpowers:claim-evidence-map`
 - Raw or underdefined idea -> `paperpowers:idea-brainstorming`
 - Need related work, citations, or paper clustering -> `paperpowers:literature-mapping`
+- Need to turn verified literature into a related-work section -> `paperpowers:related-work-writing`
 - Need to pressure-test novelty -> `paperpowers:novelty-stress-test`
 - Need experiment recommendations or gap analysis -> `paperpowers:experiment-design`
 - Need reviewer-style critique of a draft -> `paperpowers:paper-review`
@@ -27,11 +30,13 @@ Then use the matching skill:
 
 If the request spans multiple stages, handle them in this order:
 1. Clarify stage and artifacts
-2. Academic-expert diagnosis if the user needs holistic guidance
-3. Literature and novelty
-4. Experiments and figures
-5. Drafting
-6. Review and revision
+2. Project-memory load or creation if continuity matters
+3. Academic-expert diagnosis if the user needs holistic guidance
+4. Claim-evidence structure
+5. Literature and novelty
+6. Experiments and figures
+7. Drafting
+8. Review and revision
 
 ## Non-Negotiables
 
@@ -51,6 +56,8 @@ If the request spans multiple stages, handle them in this order:
 ## Recommended Artifacts
 
 When useful, save outputs under:
+- `docs/paperpowers/state/`
+- `docs/paperpowers/maps/`
 - `docs/paperpowers/ideas/`
 - `docs/paperpowers/literature/`
 - `docs/paperpowers/experiments/`

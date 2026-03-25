@@ -1,0 +1,10 @@
+interface:
+  display_name: "论点证据映射"
+  short_description: "把论文 claim、实验、图表和证据缺口稳定映射起来"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#B45309"
+  default_prompt: "Use $claim-evidence-map to把我论文里的 claim、实验和图表映射起来，告诉我哪里证据不足。"
+
+policy:
+  allow_implicit_invocation: true

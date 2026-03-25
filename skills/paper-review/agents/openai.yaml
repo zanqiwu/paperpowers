@@ -11,6 +11,9 @@ dependencies:
     - type: "mcp"
       value: "mineru-cloud"
       description: "用于对论文 PDF 做结构化解析后再执行审稿式检查的 MinerU Cloud MCP"
+    - type: "mcp"
+      value: "zotero"
+      description: "用于在 review 过程中回查用户个人文献库中的相关论文与引用元数据的 Zotero MCP"
 
 policy:
   allow_implicit_invocation: true

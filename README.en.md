@@ -6,6 +6,12 @@
 
 It borrows the workflow mindset from `superpowers`, but applies it to academic writing: idea shaping, literature search, novelty evaluation, experiment planning, figure planning, reviewer-style draft inspection, interactive section writing, and revision loops.
 
+This version also strengthens three long-running layers:
+
+- project memory
+- claim-evidence mapping
+- literature pipeline plus related-work writing
+
 ## Core Capabilities
 
 - judge the weakest part of a paper like an academic advisor

@@ -140,6 +140,33 @@
 - 先 `paper-triage`
 - 再根据判断进入 `academic-expert`、`idea-brainstorming`、`literature-mapping` 或 `experiment-design`
 
+## 12. 长期项目记忆
+
+```text
+这篇论文我会反复和你讨论。我不想每次重新打开都从头解释，请先为这篇论文建立一个长期项目状态，记录当前 thesis、top risks、已完成证据和下一步动作。
+```
+
+预期倾向：
+- `project-memory`
+
+## 13. Claim 与证据映射
+
+```text
+我这篇论文现在有 4 个主要 claim、3 张表、2 张图和一些 ablation，但我自己也说不清每个实验到底在支撑什么。请先帮我建立一个 claim-to-evidence map。
+```
+
+预期倾向：
+- `claim-evidence-map`
+
+## 14. Related Work 写作
+
+```text
+我已经整理好了 8 篇最相关论文，也都核验过摘要。不要再重新搜了，请直接按主题分组，帮我写 related work 的结构和每组的核心表述。
+```
+
+预期倾向：
+- `related-work-writing`
+
 ## 使用建议
 
 - 第一次测试时，优先用不含 skill 名称的自然语言提示词，观察是否会隐式触发对应 skill。

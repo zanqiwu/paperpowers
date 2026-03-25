@@ -1,0 +1,10 @@
+interface:
+  display_name: "项目状态记忆"
+  short_description: "为长期论文项目维护一个稳定的状态和行动记忆"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#0F766E"
+  default_prompt: "Use $project-memory to为我这篇论文建立或更新一个长期状态记忆，避免每次都从头开始。"
+
+policy:
+  allow_implicit_invocation: true

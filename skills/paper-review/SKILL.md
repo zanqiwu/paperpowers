@@ -9,6 +9,7 @@ Review the paper like a serious reviewer, not a supportive coauthor.
 
 Read `../../references/review-rubric.md` before reviewing.
 Read `../../references/pdf-ingestion-with-mineru.md` when the review target is a PDF document.
+Read `../../references/claim-evidence-map.md` when the draft has many claims and support is unclear.
 
 ## Scope
 
@@ -24,6 +25,8 @@ You may review:
 If the review target is a PDF URL, extract its structure with MinerU before reviewing.
 
 If your review comments depend on comparisons to prior papers, verify those papers' metadata and read at least their abstracts first.
+
+If findings repeatedly collapse into "evidence unclear", recommend building a claim-evidence map instead of repeating ad hoc critique.
 
 ## Review Order
 
@@ -68,6 +71,7 @@ Keep the roles separate in the output.
 
 If useful, save to:
 - `docs/paperpowers/reviews/YYYY-MM-DD-draft-review.md`
+- `docs/paperpowers/maps/YYYY-MM-DD-claim-evidence-map.md`
 
 ## Red Flags
 

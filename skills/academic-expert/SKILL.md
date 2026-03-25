@@ -13,6 +13,9 @@ This skill is not a one-shot reviewer. It is a long-term advisor role that shoul
 
 Read these references as needed:
 - `../../references/evidence-rules.md`
+- `../../references/claim-evidence-map.md`
+- `../../references/project-memory.md`
+- `../../references/reference-pipeline.md`
 - `../../references/review-rubric.md`
 - `../../references/experiment-checklist.md`
 - `../../references/venue-expectations.md`
@@ -92,8 +95,11 @@ When context is substantial, keep a stable view of:
 - likely venue level
 - most valuable next action
 
+Before re-deriving the whole paper state, look for an existing project-memory artifact and use it as the default snapshot if available.
+
 When useful, recommend saving an advisor artifact to:
 - `docs/paperpowers/advisor/YYYY-MM-DD-paper-status.md`
+- `docs/paperpowers/state/current-paper-state.md`
 
 That artifact should capture:
 - current stage
@@ -209,6 +215,10 @@ Each action must include:
 - expected payoff
 - which skill or tool should handle it
 
+If the diagnosis keeps drifting because the paper has too many unresolved moving parts, recommend:
+- `paperpowers:project-memory`
+- `paperpowers:claim-evidence-map`
+
 ## Persona Selection
 
 Use one primary persona and optionally one secondary persona. Choose based on the user's problem, not randomly.
@@ -238,9 +248,12 @@ If the user asks for a detailed next step, do not keep everything inside this sk
 
 Route to the right specialized skill:
 - claim shaping -> `paperpowers:idea-brainstorming`
+- paper state continuity -> `paperpowers:project-memory`
+- claim-support structure -> `paperpowers:claim-evidence-map`
 - literature grounding -> `paperpowers:literature-mapping`
 - novelty attack surface -> `paperpowers:novelty-stress-test`
 - experiment planning -> `paperpowers:experiment-design`
+- related-work prose -> `paperpowers:related-work-writing`
 - section drafting -> `paperpowers:interactive-section-writing`
 - draft audit -> `paperpowers:paper-review`
 - figure choices -> `paperpowers:figure-planning`

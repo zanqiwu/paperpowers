@@ -8,6 +8,7 @@ description: Use when the user knows what section they need but does not know ho
 Help the user write by extracting missing information first, then drafting.
 
 Read `../../references/evidence-rules.md` before writing technical content.
+Read `../../references/reference-pipeline.md` before writing related work from a literature set.
 
 ## Core Rule
 
@@ -52,3 +53,6 @@ Return one of these based on readiness:
 - Writing related work without citations
 - Writing contributions before the gap is clear
 - Asking five questions at once
+
+If the user already has a verified literature set and wants related-work prose, route to:
+- `paperpowers:related-work-writing`

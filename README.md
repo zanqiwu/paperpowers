@@ -6,6 +6,15 @@
 
 它借鉴了 `superpowers` 的工作流思想，但面向的是学术论文场景：idea 打磨、文献检索、创新性判断、实验设计、图表规划、论文审稿式检查、交互式章节写作，以及修订循环。
 
+当前版本重点补强了三层长期能力：
+
+- `project memory`
+  - 避免每次重新打开都要从零加载论文状态
+- `claim-evidence map`
+  - 把 claim、实验、图表和证据缺口稳定映射起来
+- `reference pipeline + related-work writing`
+  - 先做可核验文献管线，再写 related work
+
 ## 它解决什么问题
 
 很多论文辅助工具的问题不是“模型不够聪明”，而是：

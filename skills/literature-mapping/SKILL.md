@@ -9,6 +9,7 @@ Find and organize the papers that matter to the current research claim.
 
 Read `../../references/evidence-rules.md` before heavy literature work.
 Read `../../references/pdf-ingestion-with-mineru.md` when the user provides paper PDFs to inspect directly.
+Read `../../references/reference-pipeline.md` when building a literature set that will feed novelty or writing.
 
 ## Preferred Sources
 
@@ -43,6 +44,7 @@ Never rely on an unverified secondary summary when the paper itself is available
 6. Cluster the papers by theme, not by title similarity.
 7. Identify the 3-5 nearest neighbors to the user's idea.
 8. State what gap is real, weak, or unsupported.
+9. If the user needs prose rather than search output, route to `paperpowers:related-work-writing`.
 
 ## Output Format
 
@@ -51,6 +53,7 @@ Return:
 - `Cluster map`
 - `Comparison table`
 - `Citation gaps`
+- `Writing handoff`
 - `Recommended next skill`
 
 For each important paper, include:

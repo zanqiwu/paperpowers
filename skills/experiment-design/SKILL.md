@@ -8,6 +8,7 @@ description: Use when the user needs to determine which experiments are necessar
 Design experiments by working backward from claims.
 
 Read `../../references/experiment-checklist.md` and `../../references/venue-expectations.md` before finalizing the plan.
+Read `../../references/claim-evidence-map.md` if a claim-to-evidence artifact already exists.
 
 ## Core Rule
 
@@ -22,6 +23,8 @@ If a proposed experiment does not strengthen, falsify, or bound a claim, label i
 3. Check whether the user already has equivalent evidence.
 4. Detect duplicated or low-yield experiments.
 5. Produce a prioritized experiment matrix.
+
+If a claim-evidence map exists, update it instead of inventing a separate claim list.
 
 ## Typical Experiment Buckets
 

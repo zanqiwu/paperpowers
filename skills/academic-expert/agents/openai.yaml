@@ -11,6 +11,9 @@ dependencies:
     - type: "mcp"
       value: "mineru-cloud"
       description: "用于解析论文 PDF、抽取章节结构与图表标题的 MinerU Cloud MCP"
+    - type: "mcp"
+      value: "zotero"
+      description: "用于优先从用户个人文献库中检索已收藏论文与元数据的 Zotero MCP"
 
 policy:
   allow_implicit_invocation: true

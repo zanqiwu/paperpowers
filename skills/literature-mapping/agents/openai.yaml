@@ -9,6 +9,9 @@ interface:
 dependencies:
   tools:
     - type: "mcp"
+      value: "zotero"
+      description: "用于从用户个人 Zotero 文献库中优先检索 seed papers 的 Zotero MCP"
+    - type: "mcp"
       value: "mineru-cloud"
       description: "用于直接解析论文 PDF 以提取摘要、方法和实验段落的 MinerU Cloud MCP"
 

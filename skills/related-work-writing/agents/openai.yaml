@@ -1,0 +1,10 @@
+interface:
+  display_name: "相关工作写作"
+  short_description: "把已核验文献转成分组清晰的 related work 写作骨架与段落"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#1D4ED8"
+  default_prompt: "Use $related-work-writing to把我已经核验过的相关论文整理成可以直接写 related work 的结构和段落。"
+
+policy:
+  allow_implicit_invocation: true
