@@ -10,6 +10,7 @@ Create or update a compact project state artifact for an ongoing paper.
 Read:
 - `../../references/project-memory.md`
 - `../../references/evidence-rules.md`
+- `../../docs/paperpowers/templates/current-paper-state.template.md`
 
 ## When To Use
 
@@ -31,6 +32,7 @@ Use this skill when:
    - next 3 actions
 5. Update the decision log if a strategic choice changed.
 6. Keep the state compact and reload-friendly.
+7. Use the shared template unless the user explicitly asks for another format.
 
 ## Output Format
 
@@ -47,6 +49,11 @@ Return:
 
 Preferred artifact:
 - `docs/paperpowers/state/current-paper-state.md`
+
+Write it in a concise, human-readable form:
+- tables for stable fields
+- short bullets for backlog and risks
+- one sentence for thesis
 
 If another paper-state artifact already exists, update it instead of creating a parallel one.
 

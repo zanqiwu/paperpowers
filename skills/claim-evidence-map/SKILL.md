@@ -11,6 +11,7 @@ Read:
 - `../../references/evidence-rules.md`
 - `../../references/claim-evidence-map.md`
 - `../../references/experiment-checklist.md`
+- `../../docs/paperpowers/templates/claim-evidence-map.template.md`
 
 ## When To Use
 
@@ -43,6 +44,7 @@ Use this skill when:
    - redundant evidence
    - figures with no real job
 7. Recommend the smallest next evidence set that changes the decision quality.
+8. Use the shared template unless the user explicitly asks for another format.
 
 ## Output Format
 
@@ -59,6 +61,11 @@ Return:
 
 If the work is likely to continue, save or update:
 - `docs/paperpowers/maps/YYYY-MM-DD-claim-evidence-map.md`
+
+Keep the map efficient:
+- short claim statements
+- table-first structure
+- minimal prose outside the tables
 
 ## Escalation
 

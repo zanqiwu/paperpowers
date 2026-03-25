@@ -75,6 +75,7 @@ unless the evidence clearly justifies it.
 Preferred path:
 
 - `docs/paperpowers/maps/YYYY-MM-DD-claim-evidence-map.md`
+- Template: `docs/paperpowers/templates/claim-evidence-map.template.md`
 
 Suggested sections:
 
@@ -86,3 +87,5 @@ Suggested sections:
 6. redundant evidence
 7. figure alignment
 8. next highest-value experiments
+
+Prefer short tables over long narrative paragraphs. The map should be readable quickly by both the user and other skills.

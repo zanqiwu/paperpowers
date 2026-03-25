@@ -33,6 +33,7 @@ Maintain a compact project state so the agent does not need to reconstruct the p
 Preferred path:
 
 - `docs/paperpowers/state/current-paper-state.md`
+- Template: `docs/paperpowers/templates/current-paper-state.template.md`
 
 Suggested sections:
 
@@ -45,6 +46,8 @@ Suggested sections:
 7. writing backlog
 8. next 3 actions
 9. decision log
+
+Prefer the shared template over ad hoc prose. Keep the file compact, table-first, and easy to scan in under one minute.
 
 ## Session Start Rule
 

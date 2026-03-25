@@ -15,6 +15,11 @@
 - `reference pipeline + related-work writing`
   - 先做可核验文献管线，再写 related work
 
+为了避免长期状态文件越写越乱，当前版本也加入了统一模板：
+
+- `docs/paperpowers/templates/current-paper-state.template.md`
+- `docs/paperpowers/templates/claim-evidence-map.template.md`
+
 ## 它解决什么问题
 
 很多论文辅助工具的问题不是“模型不够聪明”，而是：

@@ -12,6 +12,11 @@ This version also strengthens three long-running layers:
 - claim-evidence mapping
 - literature pipeline plus related-work writing
 
+It also adds shared templates for concise, human-readable persistent artifacts:
+
+- `docs/paperpowers/templates/current-paper-state.template.md`
+- `docs/paperpowers/templates/claim-evidence-map.template.md`
+
 ## Core Capabilities
 
 - judge the weakest part of a paper like an academic advisor
