@@ -15,19 +15,6 @@ It borrows the workflow mindset from `superpowers`, but applies it to academic w
 - ask targeted questions before drafting a section
 - plan figures as communication artifacts, not decoration
 
-## Included Skills
-
-- `paper-triage`
-- `academic-expert`
-- `idea-brainstorming`
-- `literature-mapping`
-- `novelty-stress-test`
-- `experiment-design`
-- `paper-review`
-- `figure-planning`
-- `interactive-section-writing`
-- `revision-loop`
-
 ## Literature Correctness Rule
 
 `PaperPowers` adds a stricter rule for paper search correctness:
@@ -39,7 +26,7 @@ It borrows the workflow mindset from `superpowers`, but applies it to academic w
 
 ## MCP Directory
 
-All MCP tools are now grouped under `mcp/` so future tools can be added in one consistent place.
+All MCP tools are grouped under `mcp/`.
 
 Current entries:
 
@@ -47,23 +34,9 @@ Current entries:
 - [mcp/mineru-cloud/README.md](./mcp/mineru-cloud/README.md)
 - [mcp/zotero/README.md](./mcp/zotero/README.md)
 
-`mineru-cloud` is used for PDF reading and structured paper parsing, mainly by:
+`mineru-cloud` is used for PDF reading and structured paper parsing.
 
-- `academic-expert`
-- `paper-review`
-- `literature-mapping`
-
-`zotero` is intended for personal library access, especially for:
-
-- searching papers already collected by the user
-- pulling metadata and abstracts from saved entries
-- grounding related-work writing against the user's own library
-
-Important:
-
-- no API key is stored in the repository
-- the real `MINERU_TOKEN` must be configured locally
-- the wrapper source is bundled in the repository for maintenance and self-hosted use
+The Zotero path now points directly to the upstream project `kujenga/zotero-mcp` instead of maintaining a parallel local implementation inside `paperpowers`.
 
 ## Documentation
 
@@ -71,4 +44,4 @@ Important:
 - [TEST_PROMPTS.md](./TEST_PROMPTS.md): prompts for testing skill triggering
 - [mcp/README.md](./mcp/README.md): MCP directory notes
 - [mcp/mineru-cloud/README.md](./mcp/mineru-cloud/README.md): MinerU Cloud source notes
-- [mcp/zotero/README.md](./mcp/zotero/README.md): Zotero MCP source notes
+- [mcp/zotero/README.md](./mcp/zotero/README.md): Zotero MCP upstream integration notes

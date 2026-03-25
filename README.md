@@ -27,58 +27,6 @@
 - 在你不会写某一节时，先提问补足信息，再生成结构或草稿
 - 帮你规划论文图，而不是直接生成无意义的“框架图”
 
-## 当前包含的 Skills
-
-### 1. `paper-triage`
-
-入口技能。用于判断当前任务属于哪个论文阶段，并把请求路由到合适的 skill。
-
-### 2. `academic-expert`
-
-整套技能里最重要的核心角色。它会以长期学术导师和资深 reviewer 的视角，判断论文内容是否合理、claim 是否成立、实验是否足够、叙事是否偏题，以及下一步最值得投入精力的工作是什么。
-
-### 3. `idea-brainstorming`
-
-把一个模糊的研究想法整理成更清晰的论文 idea brief。
-
-### 4. `literature-mapping`
-
-用于查找、筛选、聚类和比较相关工作，找出与你最接近的论文。
-
-### 5. `novelty-stress-test`
-
-模拟苛刻 reviewer，对你的创新性主张进行压力测试。
-
-### 6. `experiment-design`
-
-从论文 claim 反推所需实验，并识别缺失实验和冗余实验。
-
-### 7. `paper-review`
-
-像正式审稿人一样审查草稿、章节、提纲、实验故事或 rebuttal。
-
-### 8. `figure-planning`
-
-规划论文应该画哪些图，每张图要表达什么，而不是直接生成花哨图示。
-
-### 9. `interactive-section-writing`
-
-当你知道要写哪一节，但不知道怎么写时，先通过提问补足信息，再生成结构或草稿。
-
-### 10. `revision-loop`
-
-把导师、审稿人或自查意见整理成一份有优先级的修订计划。
-
-## 设计原则
-
-- 先证据，再结论
-- 先核验论文元信息并阅读摘要，再把它当作相关工作依据
-- 先定位问题，再开始写
-- 先区分论文阶段，再调用合适流程
-- 不虚构论文、结果、指标和引用
-- 每个实验都必须对应某个 claim
-- 每张图都必须服务于论文叙事
-
 ## 文献正确性规则
 
 `PaperPowers` 对“搜索论文的正确性”做了额外约束：
@@ -90,7 +38,7 @@
 
 ## MCP 目录
 
-仓库中的 MCP 工具现在统一收敛到 `mcp/` 目录，便于后续继续扩展更多工具，而不是把不同集成散落在多个位置。
+仓库中的 MCP 工具统一收敛到 `mcp/` 目录，便于后续继续扩展。
 
 当前已包含：
 
@@ -104,17 +52,7 @@
 - `paper-review`
 - `literature-mapping`
 
-`zotero` 用于访问个人文献库，目前优先适合：
-
-- 检索自己已经收藏的论文
-- 拉取条目元数据和摘要
-- 在写 related work 或引用时回到个人知识库核对
-
-注意：
-
-- API key 不会写入仓库
-- 真实 `MINERU_TOKEN` 需要你在本地环境变量中设置
-- `mineru-cloud` 的封装源码已经随仓库一起提供，便于你继续维护
+`zotero` 用于访问个人文献库，目前采用“直接接入上游 `kujenga/zotero-mcp`”的方案，不在 `paperpowers` 内维护平行实现。
 
 ## 文档说明
 
@@ -129,4 +67,4 @@
 - [mcp/mineru-cloud/README.md](./mcp/mineru-cloud/README.md)
   - MinerU Cloud 源码说明
 - [mcp/zotero/README.md](./mcp/zotero/README.md)
-  - Zotero MCP 源码说明
+  - Zotero MCP 上游接入说明
