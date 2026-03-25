@@ -87,6 +87,7 @@ ln -s /path/to/paperpowers/skills ~/.agents/skills/paperpowers
 
 - [mcp/README.md](./mcp/README.md)
 - [mcp/mineru-cloud/README.md](./mcp/mineru-cloud/README.md)
+- [mcp/zotero/README.md](./mcp/zotero/README.md)
 
 ### 4.2 设置环境变量
 
@@ -128,6 +129,8 @@ export MINERU_BASE_URL="https://mineru.net/api/v4"
   }
 }
 ```
+
+如果你还想接入自己的 Zotero 文献库，也可以继续配置 [mcp/zotero/README.md](./mcp/zotero/README.md) 中的 `zotero` MCP。
 
 ## 第 5 步：验证 MinerU 是否工作
 

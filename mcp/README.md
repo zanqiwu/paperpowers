@@ -7,6 +7,9 @@
 - `mineru-cloud`
   - 用于调用 MinerU Cloud API 解析论文 PDF 和其他远程文档
   - 目录中直接放置 `server.py` 作为源码入口
+- `zotero`
+  - 参考 `kujenga/zotero-mcp` 的工具边界实现
+  - 当前提供 `search`、`metadata`、`fulltext` 三个核心工具
 
 ## 当前与哪些 skills 配合
 

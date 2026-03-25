@@ -96,12 +96,19 @@
 
 - [mcp/README.md](./mcp/README.md)
 - [mcp/mineru-cloud/README.md](./mcp/mineru-cloud/README.md)
+- [mcp/zotero/README.md](./mcp/zotero/README.md)
 
 `mineru-cloud` 用于读取和解析论文 PDF，目前主要服务于：
 
 - `academic-expert`
 - `paper-review`
 - `literature-mapping`
+
+`zotero` 用于访问个人文献库，目前优先适合：
+
+- 检索自己已经收藏的论文
+- 拉取条目元数据和摘要
+- 在写 related work 或引用时回到个人知识库核对
 
 注意：
 
@@ -121,3 +128,5 @@
   - MCP 目录说明
 - [mcp/mineru-cloud/README.md](./mcp/mineru-cloud/README.md)
   - MinerU Cloud 源码说明
+- [mcp/zotero/README.md](./mcp/zotero/README.md)
+  - Zotero MCP 源码说明

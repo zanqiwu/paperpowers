@@ -45,12 +45,19 @@ Current entries:
 
 - [mcp/README.md](./mcp/README.md)
 - [mcp/mineru-cloud/README.md](./mcp/mineru-cloud/README.md)
+- [mcp/zotero/README.md](./mcp/zotero/README.md)
 
 `mineru-cloud` is used for PDF reading and structured paper parsing, mainly by:
 
 - `academic-expert`
 - `paper-review`
 - `literature-mapping`
+
+`zotero` is intended for personal library access, especially for:
+
+- searching papers already collected by the user
+- pulling metadata and abstracts from saved entries
+- grounding related-work writing against the user's own library
 
 Important:
 
@@ -64,3 +71,4 @@ Important:
 - [TEST_PROMPTS.md](./TEST_PROMPTS.md): prompts for testing skill triggering
 - [mcp/README.md](./mcp/README.md): MCP directory notes
 - [mcp/mineru-cloud/README.md](./mcp/mineru-cloud/README.md): MinerU Cloud source notes
+- [mcp/zotero/README.md](./mcp/zotero/README.md): Zotero MCP source notes
