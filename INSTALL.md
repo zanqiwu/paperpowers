@@ -117,7 +117,8 @@ export MINERU_BASE_URL="https://mineru.net/api/v4"
         "--directory",
         "/absolute/path/to/paperpowers/mcp/mineru-cloud",
         "run",
-        "mcp-server-mineru-bach"
+        "python",
+        "server.py"
       ],
       "env": {
         "MINERU_TOKEN": "${MINERU_TOKEN}",

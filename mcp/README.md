@@ -6,6 +6,7 @@
 
 - `mineru-cloud`
   - 用于调用 MinerU Cloud API 解析论文 PDF 和其他远程文档
+  - 目录中直接放置 `server.py` 作为源码入口
 
 ## 当前与哪些 skills 配合
 
@@ -32,7 +33,8 @@
         "--directory",
         "/absolute/path/to/paperpowers/mcp/mineru-cloud",
         "run",
-        "mcp-server-mineru-bach"
+        "python",
+        "server.py"
       ],
       "env": {
         "MINERU_TOKEN": "${MINERU_TOKEN}",

@@ -16,9 +16,3 @@ dependencies = [
   "mcp[cli]",
   "requests",
 ]
-
-[project.scripts]
-mcp-server-mineru-bach = "mcp_server_mineru_bach.server:main"
-
-[tool.hatch.build.targets.wheel]
-packages = ["mcp_server_mineru_bach"]

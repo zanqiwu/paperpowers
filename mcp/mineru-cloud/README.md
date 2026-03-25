@@ -1,6 +1,12 @@
 # MinerU Cloud Source
 
-这个目录包含 `paperpowers` 仓库内随附的 `mineru-cloud` MCP 源码，包名为 `mcp-server-mineru-bach`。
+这个目录包含 `paperpowers` 仓库内随附的 `mineru-cloud` MCP 源码。
+
+当前采用最直接的源码结构：
+
+- `server.py`
+- `pyproject.toml`
+- `README.md`
 
 ## 这个源码包提供什么
 
@@ -19,7 +25,7 @@
 ## 本地运行
 
 ```bash
-uv --directory mcp/mineru-cloud run mcp-server-mineru-bach
+uv --directory mcp/mineru-cloud run python server.py
 ```
 
 ## 必需环境变量
