@@ -1,69 +1,69 @@
-# Current Paper State
+# 当前论文状态
 
-## Snapshot
+## 快照
 
-| Field | Value |
+| 字段 | 内容 |
 | --- | --- |
-| Paper | |
-| Stage | |
-| Venue target | |
-| Last updated | |
-| Owner | |
+| 论文 | |
+| 阶段 | |
+| 目标 venue | |
+| 最后更新 | |
+| 负责人 | |
 
-## Thesis
+## 核心 thesis
 
-One sentence:
+一句话：
 
-## Contribution Statement
+## 贡献陈述
 
 1. 
 2. 
 3. 
 
-## Evidence Status
+## 证据状态
 
-| Area | Status | Note |
+| 维度 | 状态 | 备注 |
 | --- | --- | --- |
-| Novelty | | |
-| Main evidence | | |
-| Experiments | | |
-| Writing | | |
-| Figures | | |
+| 新颖性 | | |
+| 核心证据 | | |
+| 实验充分性 | | |
+| 写作表达 | | |
+| 图表支撑 | | |
 
-## Top Risks
+## 主要风险
 
 1. 
 2. 
 3. 
 
-## Nearest Prior Work
+## 最接近的相关工作
 
-| Paper | Why it matters | Checked |
+| 论文 | 为什么重要 | 核验深度 |
 | --- | --- | --- |
 | | | abstract / deeper |
 | | | |
 | | | |
 
-## Active Backlog
+## 当前 backlog
 
-### Experiments
-
-- [ ] 
-- [ ] 
-- [ ] 
-
-### Writing
+### 实验
 
 - [ ] 
 - [ ] 
 - [ ] 
 
-## Next 3 Actions
+### 写作
+
+- [ ] 
+- [ ] 
+- [ ] 
+
+## 接下来 3 个动作
 
 1. 
 2. 
 3. 
 
-## Decision Log
+## 决策记录
 
 - YYYY-MM-DD: 

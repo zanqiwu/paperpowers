@@ -45,6 +45,8 @@ Use this skill when:
    - figures with no real job
 7. Recommend the smallest next evidence set that changes the decision quality.
 8. Use the shared template unless the user explicitly asks for another format.
+9. Default to Chinese for the saved artifact, while preserving necessary paper terms such as `claim`, `evidence`, `ablation`, `figure`, `table`, and `oversold` when they are clearer than forced translation.
+10. Use natural Simplified Chinese for claim summaries, evidence descriptions, and reviewer caveats.
 
 ## Output Format
 
@@ -66,6 +68,8 @@ Keep the map efficient:
 - short claim statements
 - table-first structure
 - minimal prose outside the tables
+- Chinese by default
+- natural Chinese phrasing
 
 ## Escalation
 

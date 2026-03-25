@@ -17,6 +17,8 @@ It also adds shared templates for concise, human-readable persistent artifacts:
 - `docs/paperpowers/templates/current-paper-state.template.md`
 - `docs/paperpowers/templates/claim-evidence-map.template.md`
 
+These templates now default to Chinese writing while preserving necessary academic terms when that is clearer.
+
 ## Core Capabilities
 
 - judge the weakest part of a paper like an academic advisor

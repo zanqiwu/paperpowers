@@ -1,46 +1,46 @@
-# Claim Evidence Map
+# Claim-Evidence Map（论点-证据图）
 
-## Paper Thesis
+## 论文 thesis
 
-One sentence:
+一句话：
 
-## Claim Table
+## Claim 表
 
-| Claim ID | Claim | Type | Status |
+| Claim ID | Claim 表述 | Type | Status |
 | --- | --- | --- | --- |
 | C1 | | | unsupported / weak / supported / oversold |
 | C2 | | | |
 | C3 | | | |
 
-## Evidence Table
+## 证据表
 
-| Evidence ID | Artifact | Supports | What it shows | Caveat |
+| Evidence ID | Artifact | Supports | 证明内容 | Caveat |
 | --- | --- | --- | --- | --- |
 | E1 | | C1 | | |
 | E2 | | C2 | | |
 | E3 | | C1, C3 | | |
 
-## Missing Evidence
+## 缺失证据
 
-| Claim ID | Missing evidence | Why it matters |
+| Claim ID | 缺什么 | 为什么重要 |
 | --- | --- | --- |
 | C1 | | |
 | C2 | | |
 
-## Redundant Evidence
+## 重复或低收益证据
 
-| Evidence ID | Overlap | Keep / Drop |
+| Evidence ID | 重叠点 | 保留 / 删除 |
 | --- | --- | --- |
 | E1 | | |
 
-## Figure Alignment
+## 图表对齐
 
-| Figure / Table | Linked claim | Role |
+| Figure / Table | Linked claim | 角色 |
 | --- | --- | --- |
 | Fig. 1 | | |
 | Table 1 | | |
 
-## Highest-Value Next Evidence
+## 下一步最有价值的证据
 
 1. 
 2. 

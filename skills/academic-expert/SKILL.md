@@ -96,6 +96,9 @@ When context is substantial, keep a stable view of:
 - most valuable next action
 
 Before re-deriving the whole paper state, look for an existing project-memory artifact and use it as the default snapshot if available.
+For ongoing-paper sessions, check `docs/paperpowers/state/current-paper-state.md` first before asking the user to restate the whole paper.
+Treat that state artifact as the primary long-term memory even when it is written mainly in Chinese.
+If the saved state conflicts with the current user message, surface the conflict explicitly instead of silently overwriting memory.
 
 When useful, recommend saving an advisor artifact to:
 - `docs/paperpowers/advisor/YYYY-MM-DD-paper-status.md`
@@ -107,6 +110,11 @@ That artifact should capture:
 - top evidence gaps
 - top reviewer risks
 - next 3 concrete actions
+
+When updating or reusing the state artifact:
+- keep it in natural Simplified Chinese by default
+- preserve critical academic terms in English when clearer
+- avoid forcing the user to restate content that is already captured faithfully
 
 ## Default Review Order
 

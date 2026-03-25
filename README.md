@@ -20,6 +20,8 @@
 - `docs/paperpowers/templates/current-paper-state.template.md`
 - `docs/paperpowers/templates/claim-evidence-map.template.md`
 
+这些模板默认以中文书写，但允许保留必要的论文术语，以兼顾人类可读性和专业精度。
+
 ## 它解决什么问题
 
 很多论文辅助工具的问题不是“模型不够聪明”，而是：

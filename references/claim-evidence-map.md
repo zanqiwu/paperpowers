@@ -89,3 +89,5 @@ Suggested sections:
 8. next highest-value experiments
 
 Prefer short tables over long narrative paragraphs. The map should be readable quickly by both the user and other skills.
+Default to Chinese when writing the artifact, but preserve technical paper terms in English where needed for precision.
+Prefer natural Simplified Chinese descriptions for claims, evidence summaries, and caveats.

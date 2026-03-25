@@ -48,6 +48,8 @@ Suggested sections:
 9. decision log
 
 Prefer the shared template over ad hoc prose. Keep the file compact, table-first, and easy to scan in under one minute.
+Default to Chinese when writing the artifact, but keep necessary paper-specific technical terms in English if that improves precision.
+Write natural Simplified Chinese, not awkward word-for-word translation.
 
 ## Session Start Rule
 

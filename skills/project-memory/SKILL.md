@@ -33,6 +33,8 @@ Use this skill when:
 5. Update the decision log if a strategic choice changed.
 6. Keep the state compact and reload-friendly.
 7. Use the shared template unless the user explicitly asks for another format.
+8. Default to Chinese for the saved artifact, while preserving necessary paper terms such as `thesis`, `claim`, `ablation`, `related work`, and `venue` when they are clearer than forced translation.
+9. Write natural Simplified Chinese notes that a human can keep maintaining, not literal translated fragments.
 
 ## Output Format
 
@@ -54,6 +56,8 @@ Write it in a concise, human-readable form:
 - tables for stable fields
 - short bullets for backlog and risks
 - one sentence for thesis
+- Chinese by default
+- prefer concise, natural Chinese phrasing over mixed-language headings unless the English term is genuinely clearer
 
 If another paper-state artifact already exists, update it instead of creating a parallel one.
 
